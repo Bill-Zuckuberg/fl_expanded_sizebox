@@ -15,11 +15,39 @@ class MyApp extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Expanded(
+            flex: 1,
             child: Container(
-                color: Colors.red, child: const Text('Item1 : flex1'))),
+                color: Colors.red,
+                padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                child: const Text(
+                  'Item1 : flex1',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                  ),
+                ))),
         const SizedBox(
           height: 20,
         ),
+        Expanded(
+            child: Container(
+                color: Colors.green,
+                padding: const EdgeInsets.all(15),
+                child: const Text(
+                  'Item2 : flex2',
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                )),
+            flex: 2),
+        const SizedBox(height: 20),
+        Expanded(
+            child: Container(
+                color: Colors.blue,
+                padding: const EdgeInsets.all(15),
+                child: const Text(
+                  'Item3 : flex3',
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                )),
+            flex: 3),
       ],
     );
   }
